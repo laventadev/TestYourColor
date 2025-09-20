@@ -28,27 +28,23 @@ document.getElementById('cursorBtn').addEventListener('click', function() {
 
 document.getElementById('colorPanel').addEventListener('click', function(event) {
     if (cursorMode) {
-        const x = event.offsetX;
-        const y = event.offsetY;
-        const color = getColorFromCanvas(x, y);
-        
+        const color = getColorFromPanel(event);
         document.getElementById('colorInput').value = color;
         document.getElementById('colorPanel').style.backgroundColor = color;
         document.getElementById('colorCodeDisplay').textContent = `Current Color: ${color}`;
     }
 });
 
-function getColorFromCanvas(x, y) {
-    const canvas = document.createElement('canvas');
-    const ctx = canvas.getContext('2d');
-    const panel = document.getElementById('colorPanel');
-    
-    canvas.width = panel.clientWidth;
-    canvas.height = panel.clientHeight;
-    
-    ctx.drawImage(panel, 0, 0, canvas.width, canvas.height);
-    
-    const pixel = ctx.getImageData(x, y, 1, 1).data;
+function getColorFromPanel(event) {
+    const colorPanel = document.getElementById('colorPanel');
+    const x = event.offsetX;
+    const y = event.offsetY;
+
+    const context = colorPanel.getContext('2d');
+    context.clearRect(0, 0, colorPanel.width, colorPanel.height);
+    context.drawImage(colorPanel, 0, 0, colorPanel.width, colorPanel.height);
+
+    const pixel = context.getImageData(x, y, 1, 1).data;
     return rgbToHex(pixel[0], pixel[1], pixel[2]);
 }
 
