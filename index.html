@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Advanced Color Tester</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Color display banner moved here -->
+    <div id="colorDisplayBanner">Current Color: #FFFFFF</div>
+
+    <div class="color-panel" id="colorPanel"></div>
+
+    <input type="text" id="colorInput" placeholder="Enter a color code (e.g. #FF5733)" />
+    <input type="color" id="colorPicker" title="Pick a color"/>
+
+    <div>
+      <button id="applyColorBtn">Apply Color</button>
+      <button id="cursorBtn">Cursor Mode: OFF</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+
+    <div id="errorMsg"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
