@@ -11,7 +11,7 @@ const colors = [
   "#33FF8C", "#3399FF", "#FF3399", "#B833FF", "#33FF99",
   "#9933FF", "#FF33C3", "#FF3333", "#33C3FF", "#C3FF33",
   "#FFB833", "#33FFB8", "#A8FF33", "#338CFF", "#FF3366",
-  "#33D1FF", "#D133FF" // 2 New Colors
+  "#33D1FF", "#D133FF"
 ];
 
 function createColorPanel() {
