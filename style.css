@@ -15,7 +15,7 @@ body {
   width: 90%;
 }
 
-/* Moved and styled color display */
+/* Color display banner */
 #colorDisplayBanner {
   width: 100%;
   padding: 20px;
@@ -28,6 +28,7 @@ body {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Grid of color boxes */
 .color-panel {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
@@ -64,6 +65,7 @@ body {
   border-radius: 4px;
 }
 
+/* Input fields */
 input[type="text"],
 input[type="color"] {
   width: 100%;
@@ -72,6 +74,26 @@ input[type="color"] {
   font-size: 16px;
   border: 1px solid #ddd;
   border-radius: 4px;
+}
+
+/* Color picker layout */
+.color-picker-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+  justify-content: center;
+}
+
+.color-picker-label {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Buttons */
+.button-group {
+  margin-top: 10px;
 }
 
 button {
@@ -89,6 +111,7 @@ button:hover {
   background-color: #1e88e5;
 }
 
+/* Error message */
 #errorMsg {
   color: red;
   margin-top: 10px;
